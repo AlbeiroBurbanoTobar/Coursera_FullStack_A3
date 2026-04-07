@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contacto - Super Tienda Cloud 9. Déjanos tu comentario, suscríbete o contáctanos directamente.">
+    <title>Contacto - Super Tienda Cloud 9</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Open Iconic -->
+    <link rel="stylesheet" href="node_modules/open-iconic/font/css/open-iconic-bootstrap.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ============================================ -->
+    <!-- NAVBAR FIJA                                  -->
+    <!-- ============================================ -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <span class="oi oi-cloud mr-2" aria-hidden="true"></span>
+                <span class="brand-text">Cloud 9</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain"
+                aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <span class="oi oi-home mr-1" aria-hidden="true"></span> Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="productos.html">
+                            <span class="oi oi-spreadsheet mr-1" aria-hidden="true"></span> Productos
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="contacto.html">
+                            <span class="oi oi-envelope-closed mr-1" aria-hidden="true"></span> Contacto
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Espaciador -->
+    <div class="navbar-spacer"></div>
+
+    <!-- ============================================ -->
+    <!-- CONTENIDO PRINCIPAL                          -->
+    <!-- ============================================ -->
+    <div class="container my-5">
+
+        <!-- BREADCRUMBS -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb bg-light">
+                <li class="breadcrumb-item">
+                    <a href="index.html">
+                        <span class="oi oi-home mr-1" aria-hidden="true"></span> Inicio
+                    </a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                    <span class="oi oi-envelope-closed mr-1" aria-hidden="true"></span> Contacto
+                </li>
+            </ol>
+        </nav>
+
+        <!-- Título de la página -->
+        <div class="page-header mb-4">
+            <h1 class="section-title">
+                <span class="oi oi-envelope-closed mr-2" aria-hidden="true"></span>
+                Contáctanos
+            </h1>
+            <p class="text-muted lead">¿Tienes alguna pregunta, comentario o deseas suscribirte? Completa el formulario
+                y te responderemos pronto.</p>
+        </div>
+
+        <!-- ============================================ -->
+        <!-- FORMULARIO DE CONTACTO                       -->
+        <!-- Incluye: email, select, checkbox, text, textarea -->
+        <!-- ============================================ -->
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="form-container shadow p-4 p-md-5 rounded">
+                    <form id="contactForm" novalidate>
+
+                        <!-- Campo de Nombre (text) -->
+                        <div class="form-group">
+                            <label for="inputNombre">
+                                <span class="oi oi-person mr-1" aria-hidden="true"></span>
+                                Nombre Completo
+                            </label>
+                            <input type="text" class="form-control" id="inputNombre"
+                                placeholder="Ingresa tu nombre completo" required>
+                            <small class="form-text text-muted">Tu nombre para poder dirigirnos a ti.</small>
+                        </div>
+
+                        <!-- Campo de Email -->
+                        <div class="form-group">
+                            <label for="inputEmail">
+                                <span class="oi oi-envelope-closed mr-1" aria-hidden="true"></span>
+                                Correo Electrónico
+                            </label>
+                            <input type="email" class="form-control" id="inputEmail"
+                                placeholder="ejemplo@correo.com" required>
+                            <small class="form-text text-muted">Nunca compartiremos tu email con terceros.</small>
+                        </div>
+
+                        <!-- Campo de Teléfono (text) -->
+                        <div class="form-group">
+                            <label for="inputTelefono">
+                                <span class="oi oi-phone mr-1" aria-hidden="true"></span>
+                                Teléfono
+                            </label>
+                            <input type="text" class="form-control" id="inputTelefono"
+                                placeholder="+57 300 123 4567">
+                            <small class="form-text text-muted">Opcional. Para contacto más rápido.</small>
+                        </div>
+
+                        <!-- Listado Seleccionable (select) -->
+                        <div class="form-group">
+                            <label for="selectMotivo">
+                                <span class="oi oi-list mr-1" aria-hidden="true"></span>
+                                Motivo de Contacto
+                            </label>
+                            <select class="form-control custom-select" id="selectMotivo" required>
+                                <option value="" disabled selected>Selecciona una opción...</option>
+                                <option value="comentario">Dejar un comentario</option>
+                                <option value="consulta">Consulta sobre un producto</option>
+                                <option value="soporte">Soporte técnico</option>
+                                <option value="devolucion">Devolución o cambio</option>
+                                <option value="suscripcion">Suscribirme al boletín</option>
+                                <option value="otro">Otro motivo</option>
+                            </select>
+                        </div>
+
+                        <!-- Campo de Producto de Interés (select) -->
+                        <div class="form-group">
+                            <label for="selectProducto">
+                                <span class="oi oi-cart mr-1" aria-hidden="true"></span>
+                                Producto de Interés
+                            </label>
+                            <select class="form-control custom-select" id="selectProducto">
+                                <option value="" disabled selected>Selecciona un producto...</option>
+                                <option value="laptop-ultra">Laptop Ultra</option>
+                                <option value="smartphone-x">Smartphone X</option>
+                                <option value="smart-tv-4k">Smart TV 4K</option>
+                                <option value="tablet-pro">Tablet Pro</option>
+                                <option value="laptop-gamer">Laptop Gamer</option>
+                                <option value="impresora">Impresora Multifuncional</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+
+                        <!-- Textarea (Mensaje) -->
+                        <div class="form-group">
+                            <label for="textareaMensaje">
+                                <span class="oi oi-comment-square mr-1" aria-hidden="true"></span>
+                                Tu Mensaje
+                            </label>
+                            <textarea class="form-control" id="textareaMensaje" rows="5"
+                                placeholder="Escribe tu mensaje, comentario o consulta aquí..." required></textarea>
+                        </div>
+
+                        <!-- Checkboxes -->
+                        <div class="form-group">
+                            <div class="custom-control custom-checkbox mb-2">
+                                <input type="checkbox" class="custom-control-input" id="checkNewsletter">
+                                <label class="custom-control-label" for="checkNewsletter">
+                                    <span class="oi oi-inbox mr-1" aria-hidden="true"></span>
+                                    Deseo suscribirme al boletín de ofertas y novedades
+                                </label>
+                            </div>
+                            <div class="custom-control custom-checkbox mb-2">
+                                <input type="checkbox" class="custom-control-input" id="checkPromos">
+                                <label class="custom-control-label" for="checkPromos">
+                                    <span class="oi oi-bell mr-1" aria-hidden="true"></span>
+                                    Quiero recibir notificaciones de promociones exclusivas
+                                </label>
+                            </div>
+                            <div class="custom-control custom-checkbox mb-2">
+                                <input type="checkbox" class="custom-control-input" id="checkTerminos" required>
+                                <label class="custom-control-label" for="checkTerminos">
+                                    <span class="oi oi-shield mr-1" aria-hidden="true"></span>
+                                    Acepto los <a href="#">términos y condiciones</a> y la
+                                    <a href="#">política de privacidad</a>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Botones -->
+                        <div class="form-group d-flex flex-wrap justify-content-between mt-4">
+                            <button type="submit" class="btn btn-primary btn-lg px-5 mb-2">
+                                <span class="oi oi-arrow-circle-right mr-2" aria-hidden="true"></span>
+                                Enviar Mensaje
+                            </button>
+                            <button type="reset" class="btn btn-outline-secondary btn-lg px-4 mb-2">
+                                <span class="oi oi-reload mr-2" aria-hidden="true"></span>
+                                Limpiar
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+            <!-- Información lateral -->
+            <div class="col-lg-4 mt-4 mt-lg-0">
+                <div class="contact-info-card shadow p-4 rounded">
+                    <h4 class="mb-4">
+                        <span class="oi oi-info mr-2" aria-hidden="true"></span>
+                        Información
+                    </h4>
+
+                    <div class="info-item mb-3">
+                        <span class="oi oi-map-marker text-primary mr-2" aria-hidden="true"></span>
+                        <strong>Dirección:</strong>
+                        <p class="ml-4 mb-0 text-muted">Calle de las Tiendas #10-20<br>Centro Comercial Cloud, Piso
+                            2</p>
+                    </div>
+
+                    <div class="info-item mb-3">
+                        <span class="oi oi-phone text-primary mr-2" aria-hidden="true"></span>
+                        <strong>Teléfono:</strong>
+                        <p class="ml-4 mb-0 text-muted">+57 601 234 5678</p>
+                    </div>
+
+                    <div class="info-item mb-3">
+                        <span class="oi oi-envelope-closed text-primary mr-2" aria-hidden="true"></span>
+                        <strong>Email:</strong>
+                        <p class="ml-4 mb-0 text-muted">hola@cloud9.com</p>
+                    </div>
+
+                    <div class="info-item mb-3">
+                        <span class="oi oi-clock text-primary mr-2" aria-hidden="true"></span>
+                        <strong>Horario:</strong>
+                        <p class="ml-4 mb-0 text-muted">
+                            Lun - Vie: 8:00 AM - 6:00 PM<br>
+                            Sáb: 9:00 AM - 2:00 PM
+                        </p>
+                    </div>
+
+                    <hr>
+
+                    <div class="text-center mt-3">
+                        <p class="font-weight-bold mb-2">Síguenos</p>
+                        <a href="#" class="btn btn-outline-primary btn-sm mr-1">
+                            <span class="oi oi-share-boxed" aria-hidden="true"></span> Facebook
+                        </a>
+                        <a href="#" class="btn btn-outline-info btn-sm mr-1">
+                            <span class="oi oi-globe" aria-hidden="true"></span> Twitter
+                        </a>
+                        <a href="#" class="btn btn-outline-danger btn-sm">
+                            <span class="oi oi-camera-slr" aria-hidden="true"></span> Instagram
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                       -->
+    <!-- ============================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-left mb-3 mb-md-0">
+                    <address class="mb-0">
+                        <strong>
+                            <span class="oi oi-map-marker mr-1" aria-hidden="true"></span>
+                            Super Tienda Cloud 9
+                        </strong><br>
+                        Calle de las Tiendas #10-20<br>
+                        Centro Comercial Cloud, Piso 2
+                    </address>
+                </div>
+                <div class="col-md-4 text-center mb-3 mb-md-0">
+                    <p class="font-weight-bold mb-2">Síguenos</p>
+                    <a href="#" class="btn btn-sm btn-primary mr-1">
+                        <span class="oi oi-share-boxed" aria-hidden="true"></span> FB
+                    </a>
+                    <a href="#" class="btn btn-sm btn-info mr-1">
+                        <span class="oi oi-globe" aria-hidden="true"></span> TW
+                    </a>
+                    <a href="#" class="btn btn-sm btn-danger">
+                        <span class="oi oi-camera-slr" aria-hidden="true"></span> IG
+                    </a>
+                </div>
+                <div class="col-md-4 text-right">
+                    <p class="mb-1">
+                        <span class="oi oi-envelope-closed mr-1" aria-hidden="true"></span>
+                        hola@cloud9.com
+                    </p>
+                    <p class="small text-muted">&copy; 2026 Super Tienda Cloud 9 - Módulo 2</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
