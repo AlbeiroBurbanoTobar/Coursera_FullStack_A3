@@ -40,15 +40,26 @@
                             <span class="oi oi-home mr-1" aria-hidden="true"></span> Inicio
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="productos.html">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="oi oi-spreadsheet mr-1" aria-hidden="true"></span> Productos
                         </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="productos.html">Catálogo Completo</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Laptops</a>
+                            <a class="dropdown-item" href="#">Celulares</a>
+                        </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contacto.html">
                             <span class="oi oi-envelope-closed mr-1" aria-hidden="true"></span> Contacto
                         </a>
+                    </li>
+                    <li class="nav-item ml-lg-3 mt-2 mt-lg-0">
+                        <button class="btn btn-outline-warning btn-sm" data-toggle="modal" data-target="#suscripcionModal">
+                            <span class="oi oi-bell mr-1" aria-hidden="true"></span> Suscríbete
+                        </button>
                     </li>
                 </ul>
             </div>
@@ -164,7 +175,7 @@
                     <div class="card product-card w-100 shadow-sm">
                         <img src="Images/Laptop.png" class="card-img-top" alt="Laptop Ultra">
                         <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Laptop Ultra</h5>
+                            <h5 class="card-title" data-toggle="tooltip" data-placement="top" title="¡Alta potencia para desarrollo!">Laptop Ultra</h5>
                             <p class="card-text">Potente, ligera y con batería de larga duración. Perfecta para
                                 el trabajo remoto y productividad.</p>
                             <p class="price-tag mt-auto">$1.299.000</p>
@@ -185,7 +196,7 @@
                     <div class="card product-card w-100 shadow-sm">
                         <img src="Images/CElular-Iphone.png" class="card-img-top" alt="Smartphone X">
                         <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Smartphone X</h5>
+                            <h5 class="card-title" data-toggle="tooltip" data-placement="top" title="Smartphone de última generación">Smartphone X</h5>
                             <p class="card-text">La mejor cámara del mercado para capturar tus momentos más
                                 especiales con nitidez profesional.</p>
                             <p class="price-tag mt-auto">$899.000</p>
@@ -206,7 +217,7 @@
                     <div class="card product-card w-100 shadow-sm">
                         <img src="Images/tv.jpg" class="card-img-top" alt="Smart TV 4K">
                         <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Smart TV 4K</h5>
+                            <h5 class="card-title" data-toggle="tooltip" data-placement="top" title="Resolución Ultra HD HDR">Smart TV 4K</h5>
                             <p class="card-text">Vive una experiencia cinematográfica desde la comodidad de tu
                                 sala con colores vibrantes y sonido envolvente.</p>
                             <p class="price-tag mt-auto">$1.599.000</p>
@@ -227,7 +238,7 @@
                     <div class="card product-card w-100 shadow-sm">
                         <img src="Images/tablet.jpg" class="card-img-top" alt="Tablet Pro">
                         <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Tablet Pro</h5>
+                            <h5 class="card-title" data-toggle="popover" data-trigger="hover" title="Tablet Pro" data-content="Incluye funda y lápiz óptico gratis.">Tablet Pro</h5>
                             <p class="card-text">Ideal para diseñadores y creativos. Pantalla de alta resolución
                                 con stylus incluido.</p>
                             <p class="price-tag mt-auto">$749.000</p>
@@ -248,7 +259,7 @@
                     <div class="card product-card w-100 shadow-sm">
                         <img src="Images/laptopgamer.jpeg" class="card-img-top" alt="Laptop Gamer">
                         <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Laptop Gamer</h5>
+                            <h5 class="card-title" data-toggle="tooltip" data-placement="top" title="¡Corre juegos a 120Hz!">Laptop Gamer</h5>
                             <p class="card-text">RTX 4070, 32GB RAM. Domina cualquier juego con gráficos al
                                 máximo y rendimiento extremo.</p>
                             <p class="price-tag mt-auto">$2.499.000</p>
@@ -269,7 +280,7 @@
                     <div class="card product-card w-100 shadow-sm">
                         <img src="Images/impresora.jpg" class="card-img-top" alt="Impresora Multifuncional">
                         <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Impresora Multifuncional</h5>
+                            <h5 class="card-title" data-toggle="tooltip" data-placement="top" title="Ahorra 50% en tintas">Impresora Multifuncional</h5>
                             <p class="card-text">Imprime, escanea y copia. Conectividad WiFi y rendimiento
                                 profesional para tu oficina.</p>
                             <p class="price-tag mt-auto">$459.000</p>
@@ -285,6 +296,62 @@
                     </div>
                 </div>
 
+            </div>
+        </section>
+
+        <hr class="styled-hr">
+
+        <!-- ============================================ -->
+        <!-- INFORMACIÓN DE COMPRA (TABS/PILLS + ACCORDION) -->
+        <!-- ============================================ -->
+        <section class="purchase-info my-5">
+            <h2 class="section-title text-center mb-5">Información de Compra</h2>
+            <ul class="nav nav-pills justify-content-center mb-4" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="pills-envio-tab" data-toggle="pill" href="#pills-envio" role="tab" aria-controls="pills-envio" aria-selected="true">Envíos</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="pills-pago-tab" data-toggle="pill" href="#pills-pago" role="tab" aria-controls="pills-pago" aria-selected="false">Formas de Pago</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active text-center p-4 bg-white shadow-sm rounded" id="pills-envio" role="tabpanel" aria-labelledby="pills-envio-tab">
+                    <span class="oi oi-location text-primary mb-3" style="font-size: 2rem;" aria-hidden="true"></span>
+                    <p class="lead">Realizamos envíos a todo el país a través de las mejores transportadoras. Envío gratuito en compras superiores a $50.000.</p>
+                </div>
+                <div class="tab-pane fade" id="pills-pago" role="tabpanel" aria-labelledby="pills-pago-tab">
+                    <!-- ACCORDION -->
+                    <div class="accordion shadow-sm" id="accordionPago">
+                        <div class="card">
+                            <div class="card-header bg-white" id="headingOne">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left font-weight-bold" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <span class="oi oi-credit-card mr-2 text-primary" aria-hidden="true"></span> Tarjetas de Crédito
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionPago">
+                                <div class="card-body">
+                                    Aceptamos Visa, MasterCard y American Express. Disfruta de hasta 12 cuotas sin interés en productos seleccionados.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header bg-white" id="headingTwo">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left collapsed font-weight-bold" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <span class="oi oi-transfer mr-2 text-primary" aria-hidden="true"></span> Transferencia Bancaria
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionPago">
+                                <div class="card-body">
+                                    Pagando por transferencia bancaria directa obtienes un 5% de descuento adicional en el total de tu orden.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -329,10 +396,47 @@
         </div>
     </footer>
 
+    <!-- ============================================ -->
+    <!-- MODAL DE SUSCRIPCIÓN                         -->
+    <!-- ============================================ -->
+    <div class="modal fade" id="suscripcionModal" tabindex="-1" aria-labelledby="suscripcionModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white border-0">
+                    <h5 class="modal-title" id="suscripcionModalLabel">¡Únete a nuestra comunidad!</h5>
+                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="text-center mb-4">
+                        <span class="oi oi-envelope-closed text-primary" style="font-size: 3rem;" aria-hidden="true"></span>
+                        <p class="mt-3 lead">Déjanos tus datos y recibe un <strong>10% de descuento</strong> en tu primera compra.</p>
+                    </div>
+                    <form>
+                        <div class="form-group">
+                            <label for="modalNombre" class="font-weight-bold">Nombre</label>
+                            <input type="text" class="form-control" id="modalNombre" placeholder="Tu nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="modalEmail" class="font-weight-bold">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="modalEmail" placeholder="ejemplo@correo.com">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer border-0 bg-light">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Suscribirme Ahora</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- JS -->
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
 </body>
 
 </html>
