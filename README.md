@@ -4,7 +4,7 @@ Proyecto del curso **Diseñando páginas web con Bootstrap** - Coursera Full Sta
 
 ---
 
-## 📌 Módulo 3: Comportamiento Dinámico (Ubicación de Componentes)
+## Módulo 3: Comportamiento Dinámico (Ubicación de Componentes)
 
 De acuerdo a la guía práctica del Módulo 3, a continuación se detalla dónde probar los componentes construidos:
 
@@ -17,7 +17,7 @@ De acuerdo a la guía práctica del Módulo 3, a continuación se detalla dónde
 
 ---
 
-## 📌 Módulo 2: Navegación, Tablas, Tarjetas, Media y Formularios
+## Módulo 2: Navegación, Tablas, Tarjetas, Media y Formularios
 
 ### Páginas del sitio
 
@@ -29,14 +29,14 @@ De acuerdo a la guía práctica del Módulo 3, a continuación se detalla dónde
 
 ### Requisitos implementados
 
-- ✅ Barra de navegación fija (`fixed-top`) y responsive.
-- ✅ Breadcrumbs en todas las páginas.
-- ✅ Formulario con campos: email, select, checkbox, text, textarea.
-- ✅ Librería Open Iconic con iconos en la tabla.
-- ✅ Tabla con scroll sin deformar la página.
-- ✅ Cards con título, cuerpo, footer e imágenes.
-- ✅ Banner/carousel en la página principal.
-- ✅ Disposición prolija (márgenes, padding, flex).
+- Barra de navegación fija (`fixed-top`) y responsive.
+- Breadcrumbs en todas las páginas.
+- Formulario con campos: email, select, checkbox, text, textarea.
+- Librería Open Iconic con iconos en la tabla.
+- Tabla con scroll sin deformar la página.
+- Cards con título, cuerpo, footer e imágenes.
+- Banner/carousel en la página principal.
+- Disposición prolija (márgenes, padding, flex).
 
 ### Tecnologías
 
